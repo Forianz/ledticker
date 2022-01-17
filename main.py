@@ -164,7 +164,7 @@ class RunText(MatrixBase):
         # graphics.DrawLine(self.canvas, 0, 15, self.matrix.width, 15, darkGrey)
         now = datetime.now()
         dt_string = now.strftime(dateformat)
-        graphics.DrawText(self.canvas, statusFont, self.matrix.width-len(dt_string*5)-1, 8, lightBlue, dt_string)
+        graphics.DrawText(self.canvas, statusFont, self.matrix.width-len(dt_string*5)-1, 20, lightBlue, dt_string)
 
         updated = ""
         if self.updatedAt != None:
@@ -179,10 +179,10 @@ class RunText(MatrixBase):
                 color = darkGrey
 
             if difference > 0:
-                graphics.DrawText(self.canvas, statusFont, self.matrix.width-len(updated*5)-1, 24, color, updated)
+                graphics.DrawText(self.canvas, statusFont, self.matrix.width-len(updated*5)-1, 16, color, updated)
         elif len(prices)>1:
             updated = f'out of date'
-            graphics.DrawText(self.canvas, statusFont, self.matrix.width-len(updated*5)-1, 24, darkRed, updated)
+            graphics.DrawText(self.canvas, statusFont, self.matrix.width-len(updated*5)-1, 16, darkRed, updated)
 
 
 if __name__ == "__main__":
