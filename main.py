@@ -161,7 +161,7 @@ class RunText(MatrixBase):
             self.canvas.SetImage(self.forcast['current']['icon'], 0, 0, unsafe=False)
             # self.canvas.SetImage(self.image, -self.pos)
 
-        # graphics.DrawLine(self.canvas, 0, 15, self.matrix.width, 15, darkGrey)
+        graphics.DrawLine(self.canvas, 0, 15, self.matrix.width, 30, darkGrey)
         now = datetime.now()
         dt_string = now.strftime(dateformat)
         graphics.DrawText(self.canvas, statusFont, self.matrix.width-len(dt_string*5)-1, 20, lightBlue, dt_string)
