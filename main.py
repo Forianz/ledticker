@@ -179,10 +179,10 @@ class RunText(MatrixBase):
                 color = darkGrey
 
             if difference > 0:
-                graphics.DrawText(self.canvas, statusFont, self.matrix.width-len(updated*5)-1, 16, color, updated)
+                graphics.DrawText(self.canvas, statusFont, self.matrix.width-len(updated*5)-1, 24, color, updated)
         elif len(prices)>1:
             updated = f'out of date'
-            graphics.DrawText(self.canvas, statusFont, self.matrix.width-len(updated*5)-1, 16, darkRed, updated)
+            graphics.DrawText(self.canvas, statusFont, self.matrix.width-len(updated*5)-1, 24, darkRed, updated)
 
 
 if __name__ == "__main__":
